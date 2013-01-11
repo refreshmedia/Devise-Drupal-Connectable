@@ -1,0 +1,5 @@
+Manifest
+Rakefile
+lib/devise_drupal_connectable.rb
+lib/devise_drupal_connectable/model.rb
+lib/devise_drupal_connectable/strategy.rb
