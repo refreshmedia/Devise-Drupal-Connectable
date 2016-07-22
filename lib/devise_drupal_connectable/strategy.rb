@@ -11,8 +11,14 @@ module Devise #:nodoc:
       def authenticate!
         # Attempt to find the drupal session cookie
         sessid = ""
+        if ENV['devise_drupal_connectable_ssl'] == 'true'
+          expression = /^SSESS/
+        else
+          expression = /^SESS/
+        end
+        
         cookies.each do |key, values|
-          if key =~ /^SSESS/
+          if key =~ expression
             sessid = values
           end
         end
