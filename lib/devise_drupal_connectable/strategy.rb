@@ -12,7 +12,7 @@ module Devise #:nodoc:
         # Attempt to find the drupal session cookie
         sessid = ""
         cookies.each do |key, values|
-          if key =~ /^SESS/
+          if key =~ /^SSESS/
             sessid = values
           end
         end
